@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noEmitOnError": true,
+        "noUnusedLocals": false,
+        // Source Maps (required by ts-node and ts-jest)
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "noEmit": true,
+        "pretty": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": false,
+        "lib": ["dom", "es5", "es6", "es2015", "es2015.promise"],
+        "types": ["node", "chai", "@wdio/sync", "cucumber"],
+        "baseUrl": ".",
+        "paths": {
+            "@base/*": ["./src/@base/*"],
+            "pages/*": ["./src/pages/*"]
+        }
+    },
+    "include": ["./src/**/*.ts"],
+    "compileOnSave": false,
+    "typeAcquisition": {
+        "enable": false
+    }
+}

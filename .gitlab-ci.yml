@@ -1,0 +1,22 @@
+stages:
+    - e2e_testing
+
+e2e_testing:
+    image: node:10.15.3
+    stage: e2e_testing
+    variables:
+        NODE_ENV: dev
+    script:
+        - npm ci
+        - npm run test:browserstack
+
+    only:
+        - master
+    tags:
+        - docker
+        - build
+    artifacts:
+        when: always
+        paths:
+        - reports/
+
