@@ -7,7 +7,7 @@ const url: string = "https://novostroyki.lun.ua/uk/%D0%B6%D0%BA-%D0%BF%D0%B0%D1%
 const pageCss: string = "body";
 
 const constractorWebSiteSelector:string = '/html/body/div[3]/section/div/div/div[2]/a/span';
-
+const constructorViewAllButtonSelector: string = '/html/body/div[4]/div[1]/div[4]/a/span';
 
 class ConstructorPage extends Page {
 
@@ -15,8 +15,13 @@ constractorWebSiteLink(){
     return $(constractorWebSiteSelector)
 }
 
+constructorWebSiteButtonLink(){
+    return $(constructorViewAllButtonSelector);
+}
+
 constructor() {
     super(url, pageCss);
 }
 }
+
 export default new ConstructorPage();

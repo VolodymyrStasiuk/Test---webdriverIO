@@ -27,7 +27,7 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-        
+        'src/features/**/homepage.feature'
     ],
 
     suites: {
